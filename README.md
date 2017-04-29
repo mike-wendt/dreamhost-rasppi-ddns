@@ -4,6 +4,10 @@ Script to update Dynamic DNS for Raspberry Pi using Dreamhost's API
 ## Requirements
 
 Need to install package `uuid-runtime` for `uuidgen`
+```
+sudo apt-get update
+sudo apt-get install uuid-runtime
+```
 
 ## Config
 
