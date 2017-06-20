@@ -23,7 +23,7 @@ OLDIP=`echo "$RESPONSE" | grep $DNSREC | awk '{ print $5 }'`
 echo "OLD IP: $OLDIP"
 
 # Check if NEW/OLD IPs match
-if [ $CURRIP = $OLDIP ]; then
+if [ "$CURRIP" = "$OLDIP" ]; then
   echo "SAME IP WILL NOT UPDATE RECORD"
   exit
 fi
