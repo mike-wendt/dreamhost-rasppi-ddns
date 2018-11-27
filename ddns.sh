@@ -1,7 +1,7 @@
 #!/bin/bash
 
 KEY='' # API Key from Dreamhost
-CURRIP=`curl -s myip.dnsdynamic.org`
+CURRIP=`curl -s ifconfig.co`
 DNSREC='pi.example.com' # DNS record to check/update
 UUID=`uuidgen`
 CMD0='dns-list_records'
