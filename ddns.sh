@@ -44,7 +44,7 @@ logger "INFO: DNS Record IP - $OLDIP"
 if [[ "$CURRIP" == "$OLDIP" ]]; then
   logger "INFO: Current IP matches existing record, no need to update..."
   exit
-elif [ -z "$OLD_IP"]; then
+elif [[ "$OLD_IP" != "" ]]; then
   logger "INFO: Different IP detected, updating record..." 
   send_request "https://api.dreamhost.com/?key=$KEY&unique_id=$UUID&cmd=$CMD1&record=$DNSREC&type=A&value=$OLDIP" "Remove record"
 fi
